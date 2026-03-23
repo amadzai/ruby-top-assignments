@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 NUMBER_OF_LETTERS = 26
 MIN_UPPERCASE_ASCII_VALUE = 65
 MAX_UPPERCASE_ASCII_VALUE = 90
@@ -13,7 +15,7 @@ def upper_case?(character)
 end
 
 def caesar_cipher(string, shift_value)
-  string_array = string.split('')
+  string_array = string.chars
 
   shifted_array = string_array.map do |character|
     next character unless ascii_letter?(character)
@@ -26,5 +28,5 @@ def caesar_cipher(string, shift_value)
     shifted_char_code.chr
   end
 
-  shifted_array.join('')
+  shifted_array.join
 end

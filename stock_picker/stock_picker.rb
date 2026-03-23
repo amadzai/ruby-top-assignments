@@ -1,9 +1,11 @@
+# frozen_string_literal: true
+
 def stock_picker(array)
   highest_profit = 0
   highest_profit_array = []
 
   array.each_with_index do |buy_price, buy_day|
-    array[buy_day + 1..].each_with_index do |sell_price, offset|
+    array[(buy_day + 1)..].each_with_index do |sell_price, offset|
       sell_day = buy_day + 1 + offset
       profit = sell_price - buy_price
 

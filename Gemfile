@@ -6,6 +6,7 @@ source 'https://rubygems.org'
 
 group :development do
   gem 'rubocop', require: false
+  gem 'rubocop-performance', require: false
   # gem "pry"
   # gem "rubocop-rspec", require: false
 end
